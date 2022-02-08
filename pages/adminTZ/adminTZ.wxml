@@ -1,0 +1,54 @@
+<!-- 没有登录的状态 -->
+<view wx:if="{{!isAdmin}}" class="container">
+  <view class='line_1px' />
+  <view class='item_root'>
+    团长手机号：
+    <input class="textarea25px" bindinput="getName" value="{{username}}" maxlength='10' />
+  </view>
+  <view class='line_1px' />
+  <view class='item_root'>
+    密码：
+    <input class="textarea25px" bindinput="getPassWord" value="{{phone}}" maxlength='11' />
+  </view>
+  <!-- 提交按钮 -->
+  <button class='btn_fabu' bindtap='formSubmit' type='primary'>登陆</button>
+</view>
+
+<!--登录成功的状态-->
+<view wx:if="{{isAdmin}}">
+  <view class="tuichu" bindtap="loginOut">退出登录</view>
+  <!--导航条-->
+  <view class="navbar">
+    <lable wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique"
+      bindtap="navbarTap">
+      <text>{{item}}</text>
+    </lable>
+  </view>
+  <view wx:if="{{list.length>0}}">
+    <!-- 外层 -->
+    <view class='cont_count' wx:for="{{list}}" wx:key="key">
+      <!-- 编号 -->
+      <view class='dingdanbianhao'>订单编号:{{item._id}} </view>
+      <view class="content">
+        <!-- 列表 -->
+        <view class='mingxi'>
+          <view class="mingxi_item">
+            <text>{{item.good.name}}</text>
+            <text class="mingxi_price">{{item.good.quantity}}份</text>
+          </view>
+        </view>
+        <!-- <!-- //-1订单取消,0新下单待发货,1已发货待领取，2已领取待评价,3订单已完成 -->
+        <view wx:if="{{item.status!=-1}}" class='coent_list'>
+          <label wx:if="{{item.status==0}}" class='dingdanbtn' data-id='{{item._id}}' bindtap='daohuo'>已到货</label>
+          <label wx:if="{{item.status==1}}" class='dingdanbtn' data-id='{{item._id}}' bindtap='lingqu'>用户已领取</label>
+        </view>
+      </view>
+      <view class='dibuttxt'>客户：{{item.name}} {{item.address}}</view>
+    </view>
+  </view>
+  <!-- 否则 -->
+  <view wx:else style="margin-top:16rpx;text-align: center;">
+    <label class='none_tab'>数据为空哦~~</label>
+  </view>
+
+</view>

@@ -1,0 +1,22 @@
+<view>
+  <view class="item">团长姓名：{{chief.name}}</view>
+  <view class="item" bindtap="call" data-phone="{{chief.phone}}">团长电话：{{chief.phone}}(点击拨打)</view>
+  <view class="item" bindtap="copy" data-weixin="{{chief.weixin}}">团长微信：{{chief.weixin}}(点击复制)</view>
+  <view class="item">团长负责小区：{{chief.xiaoqu}}</view>
+  <view class="item">取货地址：{{chief.pickupAddress}}</view>
+</view>
+<button type="primary" bindtap="changeTZ">切换团长</button>
+
+<!-- 选择团长时的弹窗 -->
+<view wx:if="{{isShowPopup}}">
+  <view class="popup" />
+  <view class="popup_content">
+    <text class="pop_tip">请选择团长</text>
+    <block wx:for="{{tuanzhangList}}" wx:key="index">
+      <view class="tuanzhang" bindtap="selectTZ" data-item="{{item}}">
+        {{item.name}}:{{item.xiaoqu}}
+      </view>
+    </block>
+    <!-- </scroll-view> -->
+  </view>
+</view>

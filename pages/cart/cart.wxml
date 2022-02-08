@@ -1,0 +1,35 @@
+<!-- 购物车列表 -->
+<view wx:if="{{cartList&&cartList.length>0}}">
+  <view class="food_list">
+    <view wx:for="{{cartList}}" wx:key="index" class="item" bindtap="click2">
+      <image class="item_img" src="{{item.img[0]}}"></image>
+      <view>
+        <view class="item_title">{{item.name}}</view>
+        <view class="item_sell">剩余:{{item.num}}</view>
+        <view class="bottom_root">
+          <view class="item_price">{{item.price}}</view>
+          <image bindtap="jian" data-id="{{item._id}}" class="jiajian" src="../../image/jian.png"></image>
+          <text class="num">{{item.quantity?item.quantity:0}}</text>
+          <image bindtap="jia" data-id="{{item._id}}" class="jiajian" src="../../image/jia.png"></image>
+        </view>
+      </view>
+      <image class="close" src="/image/close.png" bindtap="closeCartItem" data-index="{{index}}"></image>
+    </view>
+  </view>
+  <!-- 底部区域 -->
+  <view class="bottom_all">
+    <view class="choose_ok" bindtap="goMall">继续选购</view>
+    <view class="total_money">总计{{totalMoney}}元，{{totalNum}}件</view>
+    <view class="choose_ok" bindtap="goOrder">选好了</view>
+  </view>
+</view>
+<view wx:else class="nothing" bindtap="goMall">
+  <text class="nothing_txt"> 购物车太瘪了，去继续选购吧</text>
+</view>
+<!-- 提交订单时还未登录的弹窗 -->
+<view class='toast_box' hidden='{{!isShowAddressSetting}}' bindtap="closeLoginView">
+  <view class='toastbg'></view>
+  <view class='showToast'>
+    <button class="toast_btn" open-type="getUserInfo" type="primary" bindgetuserinfo="goLogin">授权登陆</button>
+  </view>
+</view>

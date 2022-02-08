@@ -1,0 +1,182 @@
+/* 搜索区域 */
+.search_root {
+  display: flex;
+  flex-direction: row;
+  padding: 20rpx;
+  /* 设置上下居中 */
+  align-items: center;
+}
+
+.search_input {
+  flex: 1;
+  height: 75rpx;
+  border: 1px solid var(--themeColor);
+  border-radius: 30rpx;
+  padding-left: 30rpx;
+}
+
+.search_icon {
+  width: 80rpx;
+  height: 80rpx;
+  margin-left: 20rpx;
+}
+
+/* 菜品列表 */
+.food_list {
+  margin-bottom: 80rpx;
+}
+
+.item {
+  display: flex;
+  margin: 10rpx 30rpx;
+  border-bottom: 1px solid gainsboro;
+  align-items: center;
+}
+
+.item_img {
+  width: 140rpx;
+  height: 140rpx;
+  min-width: 140rpx;
+  margin-right: 25rpx;
+}
+
+.item_title {
+  width: 470rpx;
+  /* 超过一行,省略号 */
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.item_sell {
+  font-size: 30rpx;
+  color: gray;
+}
+
+.bottom_root {
+  display: flex;
+}
+
+.item_price {
+  flex: 1;
+  font-size: 35rpx;
+  color: var(--themeColor);
+}
+
+.item_price::before {
+  content: "￥";
+  color: red;
+}
+
+.num {
+  margin: 4rpx 10rpx;
+}
+
+.jiajian {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.close {
+  width: 50rpx;
+  height: 50rpx;
+  min-width: 50rpx;
+  margin-left: 30rpx;
+}
+
+/* 底部区域 */
+.bottom_all {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80rpx;
+  background: #fef4d1;
+  display: flex;
+}
+
+.left_cart {
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 50%;
+  background: #ff9600;
+  position: absolute;
+  top: -50%;
+  margin-left: 30rpx;
+}
+
+.left_cart_img {
+  width: 70rpx;
+  height: 70rpx;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+
+.total_money {
+  margin-left: 90rpx;
+  flex: 1;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 34rpx;
+}
+
+.choose_ok {
+  width: 200rpx;
+  background: var(--themeColor);
+  line-height: 80rpx;
+  text-align: center;
+  color: white;
+}
+
+/* 列表为空 */
+.nothing {
+  text-align: center;
+  margin-top: 150rpx;
+
+}
+
+.nothing_txt {
+  background: chocolate;
+  padding: 30rpx;
+  color: white;
+  border-radius: 40rpx;
+}
+
+/* 还未登录时的弹窗 */
+.toast-box {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
+.toastbg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  background: #000;
+  z-index: 666;
+}
+
+
+.showToast {
+  position: absolute;
+  background: white;
+  opacity: 1;
+  width: 100%;
+  height: 300rpx;
+  bottom: 0;
+  z-index: 888;
+}
+
+.toast_btn {
+  width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

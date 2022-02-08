@@ -1,0 +1,167 @@
+page {
+  background: var(--themeColor);
+}
+
+.container {
+  width: 80%;
+  margin: 4%;
+  background: white;
+  border: 20px solid white;
+  border-radius: 98rpx;
+
+}
+
+.line_1px {
+  background-color: white;
+}
+
+.item_root {
+  background: #ffffff;
+  padding: 8px 10px;
+}
+
+.textarea80px {
+  /* 输入文本框的公有属性 */
+  width: 90%;
+  height: 85px;
+  border: 1px solid var(--themeColor);
+}
+
+.textarea25px {
+  width: 100%;
+  height: 25px;
+  border: 2px solid var(--themeColor);
+  border-radius: 99rpx;
+}
+
+/* 退出登陆 */
+.tuichu {
+  background: gainsboro;
+  font-size: 30rpx;
+  color: white;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+}
+
+/*按钮 */
+.btn_fabu {
+  width: 60%;
+  height: 40px;
+  margin-top: 20px;
+  align-items: center;
+  border-radius: 95rpx;
+}
+
+/* 顶部菜单切换 */
+.navbar {
+  display: flex;
+  background: #fff;
+}
+
+.none_tab {
+  position: relative;
+  top: 20rpx;
+  color: #999;
+  font-size: 32rpx;
+}
+
+.navbar .item {
+  /* 默认选中菜单 */
+  position: relative;
+  flex: auto;
+  font-size: 27rpx;
+  width: 100rpx;
+  text-align: center;
+  line-height: 80rpx;
+  color: #333;
+  border-bottom: 6rpx solid #ddd;
+}
+
+
+
+.navbar .item.active {
+  /* 选中菜单样式 */
+  color: #333;
+  border-bottom: 6rpx solid #d66058;
+}
+
+
+
+.navbar .item.active:after {
+  /* 字体 */
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4rpx;
+}
+
+/* 全部 */
+
+.cont_count {
+  background-color: white;
+  margin-top: 6rpx;
+  width: 100%;
+  margin-bottom: 6rpx;
+}
+
+.dingdanbianhao {
+  /* 顶单编号 */
+  padding: 10rpx 20rpx;
+  font-size: 28rpx;
+  border-bottom: 1rpx solid #d4d4d4;
+}
+
+.dibuttxt {
+  /* 顶单编号 */
+  padding: 10rpx 50rpx;
+  font-size: 30rpx;
+  border-bottom: 1rpx solid #d4d4d4;
+}
+
+/* 内容区域 */
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-items: center;
+  align-items: center;
+}
+
+.mingxi {
+  /* 订单明细 */
+  display: flex;
+  flex-direction: column;
+  flex: 5;
+}
+
+
+.mingxi_item {
+  margin-left: 30rpx;
+  padding: 20rpx;
+
+  border-bottom: 1px solid gainsboro;
+  font-size: 28rpx;
+}
+
+.mingxi_price {
+  margin-left: 20rpx;
+  color: var(--themeColor);
+}
+
+
+.dingdanbtn {
+  flex: 2;
+  color: darkgoldenrod;
+  margin: 30rpx;
+  width: 180rpx;
+  height: 56rpx;
+  text-align: center;
+  border: 1rpx solid darkgoldenrod;
+  font-size: 30rpx;
+  display: inline-block;
+  line-height: 56rpx;
+}

@@ -1,0 +1,11 @@
+<map style="width:100%; height:1000rpx;" longitude="{{longitude}}" latitude="{{latitude}}" scale="17"
+  markers="{{markers}}" bindmarkertap="navRoad" data-marker="{{markers[0]}}" show-location />
+<view class="phone" bindtap="Call">
+  地址：{{address}}
+</view>
+<view class="phone" bindtap="Call">
+  投诉电话：{{phone}}(可点击拨打)
+</view>
+<view class="phone" bindtap="Copy">
+  微信：{{weixin}}(可点击复制)
+</view>

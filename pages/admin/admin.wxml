@@ -1,0 +1,46 @@
+<!-- 没有登录的状态 -->
+<view wx:if="{{!isAdmin}}" class="container">
+	<view class='line_1px' />
+	<view class='item_root'>
+		账号：
+		<input class="textarea25px" bindinput="getName" value="{{username}}" maxlength='10' />
+	</view>
+	<view class='line_1px' />
+	<view class='item_root'>
+		密码：
+		<input class="textarea25px" bindinput="getPassWord" value="{{phone}}" maxlength='11' />
+	</view>
+	<!-- 提交按钮 -->
+	<button class='btn_fabu' bindtap='formSubmit' type='primary'>登陆</button>
+</view>
+
+<!--登录成功的状态-->
+<view wx:if="{{isAdmin}}">
+
+	<view class="tip">需要配送总单</view>
+	<view wx:for="{{list}}" class="item">
+		{{item._id}}:{{item.num}}
+	</view>
+	<view class="tip">需要配送给每个团长的明细</view>
+	<view wx:for="{{list2}}" class="item" bindtap="detailed" data-item="{{item}}">
+		{{item._id.pickupAddress}}-{{item._id.chiefName}}
+		<view class="item_bottom">
+			共{{item.num}}件商品
+			<text class="mingxi">点击查看明细</text>
+		</view>
+	</view>
+	<view class="tuichu" bindtap="loginOut" style="margin-top:130rpx">退出登录</view>
+</view>
+
+<!-- 查看团长明细时的弹窗 -->
+<view wx:if="{{isShowPopup}}" bindtap="closePop">
+	<view class="popup" />
+	<view class="popup_content">
+		<text class="pop_tip">{{chief._id.chiefName}}</text>
+		<block wx:for="{{list3}}" wx:key="index">
+			<view class="tuanzhang">
+				{{item._id}}:{{item.num}}
+			</view>
+		</block>
+	</view>
+</view>

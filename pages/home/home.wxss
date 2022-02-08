@@ -1,0 +1,163 @@
+/* 顶部区域用来选择团长 */
+.top_root {
+  margin: 10rpx;
+  font-size: 30rpx;
+  color: blue;
+}
+
+.top_tip {
+  color: red;
+  margin-left: 20rpx;
+  font-size: 30rpx;
+}
+
+/* 顶部轮播图 */
+swiper {
+  height: 380rpx;
+}
+
+/* 搜索框 */
+.searchRoot {
+  background: rgb(255, 255, 255);
+  padding: 25rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.searchInput {
+  flex: 1;
+  height: 70rpx;
+  padding-left: 30rpx;
+  border: 1px solid var(--themeColor);
+  border-radius: 30rpx;
+}
+
+.searchImg {
+  width: 70rpx;
+  height: 70rpx;
+  margin: 0 15rpx;
+}
+
+/* 九宫格区域 */
+
+.category-panel2 {
+  height: 90px;
+  width: 100%;
+  display: flex;
+  color: #666;
+  flex-direction: row;
+  font-size: 11px;
+  justify-content: space-around;
+}
+
+.category-item {
+  display: flex;
+  width: 60px;
+  text-align: center;
+  flex-direction: column;
+}
+
+.category-item-image {
+  width: 50px;
+  height: 50px;
+  overflow: unset;
+  padding: 15px 12px 0 6px;
+}
+
+.category-item-image1 {
+  width: 50px;
+  height: 45px;
+  overflow: unset;
+  padding: 15px 12px 0 6px;
+}
+
+.kf_button {
+  background-color: rgba(255, 255, 255, 0);
+  padding: 0px 0px 0px 0px;
+  border: 0px;
+}
+
+.kf_button::after {
+  border: 0px;
+}
+
+.category-item-text {
+  margin-top: 11px;
+}
+
+
+/* 热门推荐商品 */
+.hot_tip {
+  font-size: 45rpx;
+  color: var(--themeColor);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 35rpx 5rpx 15rpx 30rpx;
+}
+
+.more {
+  font-size: 36rpx;
+  padding: 10rpx 30rpx;
+}
+
+
+/*列表  */
+
+.good_item {
+  display: flex;
+  align-items: center;
+  margin: 5rpx 40rpx;
+  border-bottom: 1px gainsboro solid;
+  background-color: #ffffff;
+  margin-top: 3rpx;
+}
+
+.cai_img {
+  width: 120rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  text-align: center;
+  margin-left: 10rpx;
+  margin-right: 30rpx;
+}
+
+.cai_root2 {
+  flex: 1;
+  min-width: 0
+}
+
+.cai_title {
+  font-weight: 400;
+  font-size: 38rpx;
+  width: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.cai_sell {
+  font-size: 30rpx;
+  color: gray;
+}
+
+
+
+.cai_price {
+  /*价格*/
+  font-weight: bold;
+  font-size: 32rpx;
+  color: #ff9600;
+}
+
+
+
+.cai_price:before {
+  /*人民币符号*/
+  content: "￥";
+  font-size: 14px;
+}
