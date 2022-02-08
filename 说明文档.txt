@@ -1,0 +1,7 @@
+1，获取公司经纬度
+看这篇说明文档，把经纬度替换成你自己的就行了
+https://xiaoshitou.blog.csdn.net/article/details/114676633
+
+2，cms管理后台
+去云开发控制台打开内容管理
+

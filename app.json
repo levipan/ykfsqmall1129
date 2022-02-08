@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/newGood/newGood",
+    "pages/detail/detail",
+    "pages/mall/mall",
+    "pages/cart/cart",
+    "pages/pay/pay",
+    "pages/myComment/myComment",
+    "pages/myOrder/myOrder",
+    "pages/myChief/myChief",
+    "pages/me/me",
+    "pages/address/address",
+    "pages/admin/admin",
+    "pages/adminTZ/adminTZ"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFB90F",
+    "navigationBarTitleText": "社区团购",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#Fc0",
+    "selectedColor": "#FFB90F",
+    "borderStyle": "white",
+    "list": [{
+        "selectedIconPath": "image/tab1-ok.png",
+        "iconPath": "image/tab1.png",
+        "pagePath": "pages/home/home",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "image/tab2-ok.png",
+        "iconPath": "image/tab2.png",
+        "pagePath": "pages/cart/cart",
+        "text": "购物车"
+      },
+      {
+        "selectedIconPath": "image/tab3-ok.png",
+        "iconPath": "image/tab3.png",
+        "pagePath": "pages/me/me",
+        "text": "我的"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "导航需要"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}
